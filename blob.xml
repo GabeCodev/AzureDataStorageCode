@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<EnumerationResults AccountName="https://[url-for-service-account]/">  
+  <Containers>  
+    <Container>  
+      <Name>container1</Name>  
+      <Url>https://[url-for-service-account]/container1</Url>  
+      <Properties>  
+        <Last-Modified>Sun, 24 Sep 2018 18:09:03 GMT</Last-Modified>  
+        <Etag>0x8CAE7D0C4AF4487</Etag>  
+      </Properties>  
+      <Metadata>  
+        <Color>orange</Color>  
+        <ContainerNumber>01</ContainerNumber>  
+        <SomeMetadataName>SomeMetadataValue</SomeMetadataName>  
+      </Metadata>  
+    </Container>  
+    <Container>  
+      <Name>container2</Name>  
+      <Url>https://[url-for-service-account]/container2</Url>  
+      <Properties>  
+        <Last-Modified>Sun, 24 Sep 2018 17:26:40 GMT</Last-Modified>  
+        <Etag>0x8CAE7CAD8C24928</Etag>  
+      </Properties>  
+      <Metadata>  
+        <Color>pink</Color>  
+        <ContainerNumber>02</ContainerNumber>  
+        <SomeMetadataName>SomeMetadataValue</SomeMetadataName>  
+      </Metadata>  
+    </Container>  
+    <Container>  
+      <Name>container3</Name>  
+      <Url>https://[url-for-service-account]/container3</Url>  
+      <Properties>  
+        <Last-Modified>Sun, 24 Sep 2018 17:26:40 GMT</Last-Modified>  
+        <Etag>0x8CAE7CAD8EAC0BB</Etag>  
+      </Properties>  
+      <Metadata>  
+        <Color>brown</Color>  
+        <ContainerNumber>03</ContainerNumber>  
+        <SomeMetadataName>SomeMetadataValue</SomeMetadataName>  
+      </Metadata>  
+    </Container>  
+  </Containers>  
+  <NextMarker>container4</NextMarker>  
+</EnumerationResults>
