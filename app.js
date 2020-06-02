@@ -10,3 +10,14 @@ blobService.listBlobsSegmented(containerName, null, function (error, results) {
         }
     }
 });
+
+
+var azure = require('azure-storage');
+var blobService = azure.createBlobService();
+
+blobService.createContainerIfNotExists('myblobcontainer', function(err, result, response) {
+  if (!err) {
+    // if result.created = true, container was created.
+    // if result.created = false, container already existed.
+  }
+});
