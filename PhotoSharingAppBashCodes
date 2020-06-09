@@ -1,0 +1,93 @@
+mkdir PhotoSharingApp
+
+cd PhotoSharingApp
+npm init -y
+
+
+touch index.js
+
+
+Use the below command line in the Cloud Shell on the right to create the account.
+
+Use a unique name. We recommend something like "photostore" with your initials and a random number. You will get an error if it's not unique.
+Normally you would create a new resource group to hold your app resources, but in this case, use the sandbox resource group "learn-ac099b80-e65d-49e9-ab4f-3550eac4ac58".
+Use "Standard_LRS" for the sku. This will use standard storage with local replication, which is fine for this example.
+Use "Cool" for the Access Tier.
+
+az storage account create --name "photostoragegabriel1977" --resource-group"learn-ac099b80-e65d-49e9-ab4f-3550eac4ac58" --location "westus2" --kind "StorageV2" --sku "Standard_LRS" --access-tier "Cool"
+
+{- Finished ..
+  "accessTier": "Cool",
+  "azureFilesIdentityBasedAuthentication": null,
+  "blobRestoreStatus": null,
+  "creationTime": "2020-06-09T18:45:16.683211+00:00",
+  "customDomain": null,
+  "enableHttpsTrafficOnly": true,
+  "encryption": {
+    "keySource": "Microsoft.Storage",
+    "keyVaultProperties": null,
+    "services": {
+      "blob": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2020-06-09T18:45:16.745738+00:00"
+      },
+      "file": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2020-06-09T18:45:16.745738+00:00"
+      },
+      "queue": null,
+      "table": null
+    }
+  },
+  "failoverInProgress": null,
+  "geoReplicationStats": null,
+  "id": "/subscriptions/2b90b9cd-d4b4-486d-a193-5ebee386d284/resourceGroups/learn-ac099b80-e65d-49e9-ab4f-3550eac4ac58/providers/Microsoft.Storage/storageAccounts/photostoragegabriel1977",
+  "identity": null,
+  "isHnsEnabled": null,
+  "kind": "StorageV2",
+  "largeFileSharesState": null,
+  "lastGeoFailoverTime": null,
+  "location": "westus2",
+  "name": "photostoragegabriel1977",
+  "networkRuleSet": {
+    "bypass": "AzureServices",
+    "defaultAction": "Allow",
+    "ipRules": [],
+    "virtualNetworkRules": []
+  },
+  "primaryEndpoints": {
+    "blob": "https://photostoragegabriel1977.blob.core.windows.net/",
+    "dfs": "https://photostoragegabriel1977.dfs.core.windows.net/",
+    "file": "https://photostoragegabriel1977.file.core.windows.net/",
+    "internetEndpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://photostoragegabriel1977.queue.core.windows.net/",
+    "table": "https://photostoragegabriel1977.table.core.windows.net/",
+    "web": "https://photostoragegabriel1977.z5.web.core.windows.net/"
+  },
+  "primaryLocation": "westus2",
+  "privateEndpointConnections": [],
+  "provisioningState": "Succeeded",
+  "resourceGroup": "learn-ac099b80-e65d-49e9-ab4f-3550eac4ac58",
+  "routingPreference": null,
+  "secondaryEndpoints": null,
+  "secondaryLocation": null,
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "statusOfPrimary": "available",
+  "statusOfSecondary": null,
+  "tags": {},
+  "type": "Microsoft.Storage/storageAccounts"
+}
+
+
+
+storage account connection strings
+
+DefaultEndpointsProtocol=https;AccountName={your-storage};
+   AccountKey={your-access-key};
+   EndpointSuffix=core.windows.net
